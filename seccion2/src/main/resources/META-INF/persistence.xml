@@ -1,0 +1,23 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="jpa_main">
+        <!-- Necesitario definir la ruta de las entidades si usamos eclipse link-->
+        <!--<class>org.formacion.jpa.domain.Persona</class> -->
+        <!-- Indicamos el proveedor a usar -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <properties>
+            <!-- ruta a la DB -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
+            <!-- generacion del schema de db -->
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <!-- logs
+            propiedad hibernate jpa-->
+            <property name="hibernate.show_sql" value="true"/>
+            <!-- propiedad eclipse jpa -->
+            <property name="eclipselink.loggin.level" value="FINE"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
